@@ -1,0 +1,14 @@
+{
+    "title" :  "Software Developer",
+    "started" :  "2024-02-01",
+    "ended" :  "2025-08-01",
+    "company" :  "Grafisk Digital AS",
+    "summary" :  "Development of a self-service portal for sending addressed mail and electronic invoices.",
+    "tech" : [
+        "PHP",
+        "Laravel",
+        "PHPUnit",
+        "MySQL"
+    ],
+    "type" : "WORK"
+}

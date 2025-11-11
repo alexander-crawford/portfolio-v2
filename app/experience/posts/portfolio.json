@@ -1,0 +1,14 @@
+{
+    "title" :  "Portfolio",
+    "started" :  "2021-03-01",
+    "ended" :  "",
+    "company" :  "Project",
+    "summary" :  "A portfolio created for me to gain a better understanding of React, Next.js, Tailwind and TypeScript.",
+    "tech" : [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "TypeScript"
+    ],
+    "type" : "PROJECT"
+}

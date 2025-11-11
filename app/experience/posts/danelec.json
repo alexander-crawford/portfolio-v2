@@ -1,0 +1,14 @@
+{
+    "title" :  "Software Production Engineer",
+    "started" :  "2022-09-01",
+    "ended" :  "2023-01-01",
+    "company" :  "Danelec Norway",
+    "summary" :  "Development and configuration of both new and legacy vessel monitoring systems, and creation of user documentation",
+    "tech" : [
+        "JavaScript",
+        "Delphi",
+        "Git",
+        "Markdown"
+    ],
+    "type" : "WORK"
+}

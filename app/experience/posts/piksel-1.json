@@ -1,0 +1,13 @@
+{
+    "title" :  "Software Developer",
+    "started" :  "2023-04-01",
+    "ended" :  "2023-11-01",
+    "company" :  "Piksel Produksjoner LTD",
+    "summary" :  "Development of software that allows for the control of IOT devices via a VR headset using the WebThings API.",
+    "tech" : [
+        "Bash",
+        "Ubuntu",
+        "JavaScript"
+    ],
+    "type" : "WORK"
+}

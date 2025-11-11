@@ -1,0 +1,13 @@
+{
+    "title" :  "Record Label",
+    "started" :  "2021-10-01",
+    "ended" :  "2022-09-01",
+    "company" :  "Project",
+    "summary" :  "Plans for a web application to handle the digital distribution of a record label",
+    "tech" : [
+        "PHP",
+        "UML",
+        "MySQL"
+    ],
+    "link" : "https://github.com/alexander-crawford/record-label"
+}

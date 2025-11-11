@@ -1,0 +1,15 @@
+{
+    "title" :  "Album Chart",
+    "started" :  "2021-05-01",
+    "ended" :  "2022-01-01",
+    "company" :  "Project",
+    "summary" :  "An album chart created by taking albums from various sources.",
+    "tech" : [
+        "Python",
+        "PHP",
+        "JavaScript",
+        "MySQL"
+    ],
+    "link" : "https://github.com/alexander-crawford/album-chart",
+    "type" : "PROJECT"
+}

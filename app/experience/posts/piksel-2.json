@@ -1,0 +1,12 @@
+{
+    "title" :  "Software Technician",
+    "started" :  "2021-11-01",
+    "ended" :  "2021-12-01",
+    "company" :  "Piksel Produksjoner LTD",
+    "summary" :  "Configuration and setup of gallery exhibitions using Raspberry Pi.",
+    "tech" : [
+        "Linux",
+        "Bash"
+    ],
+    "type" : "WORK"
+}
