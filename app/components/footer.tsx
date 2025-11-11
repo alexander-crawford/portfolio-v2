@@ -1,7 +1,3 @@
-import { 
-    SiGithub,
-    SiRss
-} from '@icons-pack/react-simple-icons';
 function ArrowIcon() {
   return (
     <svg
@@ -28,11 +24,21 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
+            href="mailto:mail@alexander-crawford.com"
+          >
+            <ArrowIcon />
+            <p className="ml-2">email</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
             href="/rss"
           >
             <ArrowIcon />
             <p className="ml-2">rss</p>
-            <SiRss  className="ml-2 h-5"/>
           </a>
         </li>
         <li>
@@ -44,7 +50,6 @@ export default function Footer() {
           >
             <ArrowIcon />
             <p className="ml-2">github</p>
-            <SiGithub  className="ml-2 h-5"/>
           </a>
         </li>
         <li>
