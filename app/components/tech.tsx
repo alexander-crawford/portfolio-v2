@@ -20,7 +20,9 @@ import {
   SiMarkdown,
   SiTypescript,
   SiApache,
-  SiPython
+  SiPython,
+  SiBootstrap,
+  SiSass
 } from '@icons-pack/react-simple-icons';
 
 type TechListProps = {
@@ -47,7 +49,9 @@ const TechIcons: Record<string, React.ElementType> = {
   Markdown: SiMarkdown,
   TypeScript: SiTypescript,
   Apache: SiApache,
-  Python: SiPython
+  Python: SiPython,
+  Bootstrap: SiBootstrap,
+  Sass: SiSass
 };
 
 const TechIconColours: Record<string, string> = {

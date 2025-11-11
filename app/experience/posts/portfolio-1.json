@@ -1,0 +1,13 @@
+{
+    "title" :  "Portfolio V1",
+    "started" :  "2021-03-01",
+    "ended" :  "2025-11-01",
+    "company" :  "Project",
+    "summary" :  "A portfolio created to showcase my work.",
+    "tech" : [
+        "Bootstrap",
+        "Sass"
+    ],
+    "type" : "PROJECT",
+    "link" : "https://github.com/alexander-crawford/porfolio-v1"
+}
