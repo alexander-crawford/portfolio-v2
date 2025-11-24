@@ -1,8 +1,10 @@
 import { BlogPosts } from 'app/components/posts'
 import { FcAcceptDatabase, FcUp, FcDown } from "react-icons/fc";
 import { NorwayIcon } from 'app/components/norway' 
+import { getBlogPosts } from 'app/blog/utils/server/utils'
 
 export default function Page() {
+  let allBlogs = getBlogPosts()
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
@@ -21,7 +23,7 @@ export default function Page() {
         The blog page lists all blog posts with the latest posts found below. <FcDown className="w-10 h-10"/>
       </p>
       <div className="my-8">
-        <BlogPosts />
+        <BlogPosts posts={allBlogs}/>
       </div>
     </section>
   )

@@ -1,10 +1,35 @@
+"use client";
+import { useState } from "react";
 import Link from 'next/link'
-import { formatDate, getBlogPosts, getExperiencePosts} from 'app/blog/utils'
+import { formatDate } from 'app/blog/utils/client/utils'
 import { TechList } from "app/components/tech";
 import { Position } from "app/components/position";
+import { TechDropDown } from "app/components/tech-dropdown";
+import { 
+  SiReact,
+  SiTailwindcss,
+  SiPhp,
+  SiLaravel,
+  SiUml,
+  SiMysql,
+  SiGit,
+  SiJavascript,
+  SiLinux,
+  SiUbuntu,
+  SiGnubash,
+  SiNextdotjs,
+  SiDelphi,
+  SiMarkdown,
+  SiTypescript,
+  SiPython,
+  SiBootstrap,
+  SiSass
+} from '@icons-pack/react-simple-icons';
 
-export function BlogPosts() {
-  let allBlogs = getBlogPosts()
+
+export function BlogPosts({ posts }) {
+
+  let allBlogs = posts;
 
   return (
     <div>
@@ -42,12 +67,62 @@ export function BlogPosts() {
   )
 }
 
-export function ExperiencePosts() {
-  let allExperience = getExperiencePosts()
+export type Metadata = {
+  title: string;
+  started: string;
+  ended: string;
+  company: string;
+  summary: string;
+  tech: string[];
+  link: string;
+  type: string;
+};
+
+export type ExperiencePost = {
+  metadata: Metadata;
+};
+
+type ExperiencePostsProps = {
+  posts: ExperiencePost[]
+};
+
+export function ExperiencePosts({ posts } : ExperiencePostsProps) {
+
+
+  const [selectedTech, setSelectedTech] = useState("");
+
+  const filteredExperience =
+    selectedTech === ""
+      ? posts
+      : posts.filter(post =>
+          post.metadata.tech.includes(selectedTech)
+        );
+
+  const TechIcons: Record<string, React.ElementType> = {
+    React: SiReact,
+    "Next.js": SiNextdotjs,
+    Tailwind: SiTailwindcss ,
+    PHP: SiPhp,
+    Laravel: SiLaravel,
+    UML: SiUml,
+    MySQL: SiMysql,
+    Git: SiGit,
+    JavaScript: SiJavascript,
+    Linux: SiLinux,
+    Ubuntu: SiUbuntu,
+    Bash: SiGnubash,
+    Delphi: SiDelphi,
+    Markdown: SiMarkdown,
+    TypeScript: SiTypescript,
+    Python: SiPython,
+    Bootstrap: SiBootstrap,
+    Sass: SiSass
+  };
 
   return (
     <div>
-      {allExperience
+      <TechDropDown items={Object.keys(TechIcons).sort()} onChange={setSelectedTech} value={selectedTech} />
+      {filteredExperience
         .sort((a, b) => {
           const aEnded = a.metadata.ended;
           const bEnded = b.metadata.ended;
@@ -72,7 +147,7 @@ export function ExperiencePosts() {
               company={post.metadata.company} 
               link={post.metadata.link} 
               type={post.metadata.type} />
-            <TechList tech={post.metadata.tech} />
+            <TechList tech={post.metadata.tech} icons={TechIcons} />
             <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
               {post.metadata.summary}
             </p>

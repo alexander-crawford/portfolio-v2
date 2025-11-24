@@ -1,4 +1,4 @@
-import { getBlogPosts } from 'app/blog/utils'
+import { getBlogPosts } from 'app/blog/utils/server/utils'
 
 export const baseUrl = 'https://alexander-crawford.com'
 
